@@ -1,0 +1,108 @@
+{
+  "chunk_count": 15,
+  "chunk_counts_by_source": {
+    "refund_policy.txt": 4,
+    "delivery_policy.txt": 3,
+    "escalation_policy.txt": 3,
+    "payment_policy.txt": 3,
+    "privacy_policy.txt": 2
+  },
+  "retrieval_demo_sources": [
+    "refund_policy.txt",
+    "refund_policy.txt",
+    "refund_policy.txt"
+  ],
+  "retrieval_evaluation_overlap10": {
+    "overlap": 10,
+    "chunk_count": 15,
+    "answerable_retrieval_hits": 12,
+    "answerable_expected_facts": 12,
+    "unanswerable_fallbacks": 2,
+    "failures": []
+  },
+  "retrieval_evaluation_overlap0": {
+    "overlap": 0,
+    "chunk_count": 13,
+    "answerable_retrieval_hits": 12,
+    "answerable_expected_facts": 10,
+    "unanswerable_fallbacks": 2,
+    "failures": [
+      {
+        "question": "What delivery time makes a completed order eligible for a full refund?",
+        "reason": "retrieval_hit=True; expected_fact_hit=False; answer=receives a full refund of the order amount."
+      },
+      {
+        "question": "How soon is money returned when a payment fails but is deducted?",
+        "reason": "retrieval_hit=True; expected_fact_hit=False; answer=If a payment fails but money is deducted, the amount is returned automatically\n \n1000 must be approved by a human support lead before money is returned."
+      }
+    ]
+  },
+  "scenario_results": [
+    {
+      "scenario_id": "S1",
+      "status": "REFUND",
+      "refund_amount": 128.25,
+      "llm_calls": 5,
+      "tokens_used": 1282
+    },
+    {
+      "scenario_id": "S2",
+      "status": "REFUND",
+      "refund_amount": 135.0,
+      "llm_calls": 5,
+      "tokens_used": 1282
+    },
+    {
+      "scenario_id": "S3",
+      "status": "ESCALATE",
+      "refund_amount": 1999.0,
+      "llm_calls": 5,
+      "tokens_used": 1269
+    },
+    {
+      "scenario_id": "S4",
+      "status": "DENIED",
+      "refund_amount": 0.0,
+      "llm_calls": 4,
+      "tokens_used": 913
+    },
+    {
+      "scenario_id": "S5",
+      "status": "DENIED",
+      "refund_amount": 0.0,
+      "llm_calls": 3,
+      "tokens_used": 568
+    },
+    {
+      "scenario_id": "S6",
+      "status": "NOT_FOUND",
+      "refund_amount": 0.0,
+      "llm_calls": 2,
+      "tokens_used": 226
+    },
+    {
+      "scenario_id": "S7",
+      "status": "FALLBACK_MAX_ITERATIONS",
+      "refund_amount": 0.0,
+      "llm_calls": 6,
+      "tokens_used": 3462
+    }
+  ],
+  "token_demo_status": "FALLBACK_TOKEN_LIMIT",
+  "token_demo_tokens": 256,
+  "timeout_demo_status": "FALLBACK_TIMEOUT",
+  "crash_resume": {
+    "run_id": "S1_CRASH_RESUME_resume_demo",
+    "status": "REFUND",
+    "final_answer": "REFUND: INR 128.25 issued.",
+    "tools_executed": [
+      "get_order",
+      "search_policy",
+      "calculate_refund",
+      "issue_refund"
+    ],
+    "llm_calls": 5,
+    "tokens_used": 1282
+  },
+  "react_vs_plan_execute": "In this mock, ReAct takes 5 model calls for S1, 3 for S5 and 2 for S6 because each observation is returned to the model before the next action. That adds prompt/observation tokens compared with a plan-and-execute design that asks for a complete tool sequence once and replans only after an error. However, ReAct can inspect NOT_FOUND, cancelled status, delivery time and calculated refund before choosing the next tool, whereas a fixed plan risks attempting an invalid action or needs a replan. For refunds I would choose ReAct: the extra calls are justified by conditional decisions and the ability to stop safely before an unauthorized or incorrect payment."
+}

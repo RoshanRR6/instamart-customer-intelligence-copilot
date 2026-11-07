@@ -1,0 +1,142 @@
+{
+  "cohort_rows": 1156,
+  "lapsed_count": 443,
+  "lapsed_rate_pct": 38.32179930795848,
+  "train_rows": 924,
+  "test_rows": 232,
+  "train_class_counts": {
+    "0": 570,
+    "1": 354
+  },
+  "test_class_counts": {
+    "0": 143,
+    "1": 89
+  },
+  "baseline": {
+    "accuracy": 0.6163793103448276,
+    "lapsed_precision": 0.0,
+    "lapsed_recall": 0.0,
+    "lapsed_f1": 0.0
+  },
+  "logistic": {
+    "best_params": {
+      "model__C": 100
+    },
+    "best_cv_f1": 0.6436020113096484,
+    "test": {
+      "confusion_matrix": [
+        [
+          108,
+          35
+        ],
+        [
+          33,
+          56
+        ]
+      ],
+      "precision": 0.6153846153846154,
+      "recall": 0.6292134831460674,
+      "f1": 0.6222222222222222,
+      "accuracy": 0.7068965517241379
+    }
+  },
+  "random_forest": {
+    "best_params": {
+      "model__max_depth": 8,
+      "model__min_samples_leaf": 10
+    },
+    "best_cv_f1": 0.6830841630250333,
+    "test": {
+      "confusion_matrix": [
+        [
+          111,
+          32
+        ],
+        [
+          30,
+          59
+        ]
+      ],
+      "precision": 0.6483516483516484,
+      "recall": 0.6629213483146067,
+      "f1": 0.6555555555555556,
+      "accuracy": 0.7327586206896551
+    }
+  },
+  "selected_model": "random_forest",
+  "oversampled_logistic_test": {
+    "confusion_matrix": [
+      [
+        90,
+        53
+      ],
+      [
+        12,
+        77
+      ]
+    ],
+    "precision": 0.5923076923076923,
+    "recall": 0.8651685393258427,
+    "f1": 0.7031963470319634,
+    "accuracy": 0.7198275862068966
+  },
+  "frequency_scaler_train_mean": 8.114718614718615,
+  "frequency_full_cohort_mean": 8.028546712802768,
+  "rf_top_features": [
+    {
+      "feature": "num__frequency",
+      "importance": 0.2842905868196367
+    },
+    {
+      "feature": "num__monetary",
+      "importance": 0.27482774944237065
+    },
+    {
+      "feature": "num__recency",
+      "importance": 0.12292408862068686
+    },
+    {
+      "feature": "num__avg_delivery_minutes",
+      "importance": 0.06236866731653788
+    },
+    {
+      "feature": "num__cancellation_rate",
+      "importance": 0.04799228353098919
+    }
+  ],
+  "logistic_coefficient_signs": [
+    {
+      "feature": "recency",
+      "coefficient": 0.04247323447087381,
+      "sign": "positive"
+    },
+    {
+      "feature": "frequency",
+      "coefficient": -1.626613160740767,
+      "sign": "negative"
+    },
+    {
+      "feature": "monetary",
+      "coefficient": 0.22239132182364912,
+      "sign": "positive"
+    }
+  ],
+  "reloaded_predictions_identical": true,
+  "retention_list_rows": 10,
+  "retention_list_actually_lapsed": 0,
+  "retention_list_is_illustrative_posthoc_premium_flag": true,
+  "feature_missing_values": 0,
+  "feature_columns": [
+    "recency",
+    "frequency",
+    "monetary",
+    "avg_discount_pct",
+    "cancellation_rate",
+    "avg_delivery_minutes",
+    "age",
+    "tenure_days",
+    "city",
+    "gender",
+    "favourite_category"
+  ]
+}

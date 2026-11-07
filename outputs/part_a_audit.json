@@ -1,0 +1,186 @@
+{
+  "customers": {
+    "shape": [
+      1200,
+      5
+    ],
+    "columns": [
+      {
+        "column": "customer_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "city",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "signup_date",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "age",
+        "dtype": "float64",
+        "missing_count": 61,
+        "missing_pct": 5.0833
+      },
+      {
+        "column": "gender",
+        "dtype": "object",
+        "missing_count": 30,
+        "missing_pct": 2.5
+      }
+    ]
+  },
+  "products": {
+    "shape": [
+      40,
+      4
+    ],
+    "columns": [
+      {
+        "column": "product_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "product_name",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "category",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "price_inr",
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      }
+    ]
+  },
+  "orders": {
+    "shape": [
+      13084,
+      9
+    ],
+    "columns": [
+      {
+        "column": "order_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "customer_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "product_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "quantity",
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "order_ts",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "status",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "discount_pct",
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "order_amount",
+        "dtype": "object",
+        "missing_count": 53,
+        "missing_pct": 0.4051
+      },
+      {
+        "column": "delivery_minutes",
+        "dtype": "float64",
+        "missing_count": 2541,
+        "missing_pct": 19.4207
+      }
+    ]
+  },
+  "tickets": {
+    "shape": [
+      164,
+      5
+    ],
+    "columns": [
+      {
+        "column": "ticket_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "customer_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "order_id",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "text",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      },
+      {
+        "column": "true_category",
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_pct": 0.0
+      }
+    ]
+  },
+  "specific": {
+    "orders_raw_rows": 13084,
+    "orders_exact_duplicate_rows": 119,
+    "orders_pending_rows": 656,
+    "orders_distinct_order_id": 12309,
+    "orders_non_numeric_amount": 120,
+    "orders_negative_delivery": 106,
+    "orders_blank_delivery": 2541,
+    "customers_blank_age": 61,
+    "customers_age_outside_10_100": 6,
+    "customers_raw_city_spellings": 24,
+    "customers_raw_nonblank_gender_spellings": 10,
+    "customers_blank_gender": 30
+  }
+}

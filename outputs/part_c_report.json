@@ -1,0 +1,245 @@
+{
+  "input_tickets": 164,
+  "empty_tickets": 4,
+  "long_tickets": 4,
+  "eligible_tickets": 156,
+  "long_ticket_estimated_tokens": [
+    734
+  ],
+  "redaction_counts": {
+    "email": 55,
+    "phone": 91,
+    "order_id": 132,
+    "total": 278
+  },
+  "residual_pii_matches_after_redaction": 0,
+  "zero_shot": {
+    "run_name": "zero_shot_full",
+    "prompt": "zero_shot",
+    "token_budget": null,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "flagged_long": 4,
+      "skipped_empty": 4
+    },
+    "classified_tickets": 147,
+    "correct_classifications": 126,
+    "accuracy_classified_only": 0.8571428571428571,
+    "total_tokens": 13144,
+    "tokens_per_classified_ticket": 89.41496598639456,
+    "retry_count": 19,
+    "mock_call_attempts": 175,
+    "successful_mock_responses": 156,
+    "retry_log": [
+      "ticket_id=T0002 retry=0 wait_seconds=0.052993",
+      "ticket_id=T0116 retry=0 wait_seconds=0.045313",
+      "ticket_id=T0153 retry=0 wait_seconds=0.048438",
+      "ticket_id=T0039 retry=0 wait_seconds=0.047790",
+      "ticket_id=T0152 retry=0 wait_seconds=0.054206",
+      "ticket_id=T0043 retry=0 wait_seconds=0.053459",
+      "ticket_id=T0111 retry=0 wait_seconds=0.056152",
+      "ticket_id=T0155 retry=0 wait_seconds=0.046087",
+      "ticket_id=T0100 retry=0 wait_seconds=0.050274",
+      "ticket_id=T0068 retry=0 wait_seconds=0.045372",
+      "ticket_id=T0135 retry=0 wait_seconds=0.047733",
+      "ticket_id=T0009 retry=0 wait_seconds=0.051317",
+      "ticket_id=T0067 retry=0 wait_seconds=0.045332",
+      "ticket_id=T0106 retry=0 wait_seconds=0.047485",
+      "ticket_id=T0097 retry=0 wait_seconds=0.053124",
+      "ticket_id=T0003 retry=0 wait_seconds=0.051812",
+      "ticket_id=T0019 retry=0 wait_seconds=0.047756",
+      "ticket_id=T0086 retry=0 wait_seconds=0.052366",
+      "ticket_id=T0065 retry=0 wait_seconds=0.055118"
+    ],
+    "redaction_counts": {
+      "email": 55,
+      "phone": 91,
+      "order_id": 132,
+      "total": 278
+    },
+    "budget_exhausted": 0,
+    "routing_counts": {
+      "support_queue": 112,
+      "security_team": 23,
+      "human_review": 17,
+      "premium_desk": 12
+    }
+  },
+  "few_shot": {
+    "run_name": "few_shot_full",
+    "prompt": "few_shot",
+    "token_budget": null,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "flagged_long": 4,
+      "skipped_empty": 4
+    },
+    "classified_tickets": 147,
+    "correct_classifications": 147,
+    "accuracy_classified_only": 1.0,
+    "total_tokens": 28432,
+    "tokens_per_classified_ticket": 193.41496598639455,
+    "retry_count": 19,
+    "mock_call_attempts": 175,
+    "successful_mock_responses": 156,
+    "retry_log": [
+      "ticket_id=T0002 retry=0 wait_seconds=0.052993",
+      "ticket_id=T0116 retry=0 wait_seconds=0.045313",
+      "ticket_id=T0153 retry=0 wait_seconds=0.048438",
+      "ticket_id=T0039 retry=0 wait_seconds=0.047790",
+      "ticket_id=T0152 retry=0 wait_seconds=0.054206",
+      "ticket_id=T0043 retry=0 wait_seconds=0.053459",
+      "ticket_id=T0111 retry=0 wait_seconds=0.056152",
+      "ticket_id=T0155 retry=0 wait_seconds=0.046087",
+      "ticket_id=T0100 retry=0 wait_seconds=0.050274",
+      "ticket_id=T0068 retry=0 wait_seconds=0.045372",
+      "ticket_id=T0135 retry=0 wait_seconds=0.047733",
+      "ticket_id=T0009 retry=0 wait_seconds=0.051317",
+      "ticket_id=T0067 retry=0 wait_seconds=0.045332",
+      "ticket_id=T0106 retry=0 wait_seconds=0.047485",
+      "ticket_id=T0097 retry=0 wait_seconds=0.053124",
+      "ticket_id=T0003 retry=0 wait_seconds=0.051812",
+      "ticket_id=T0019 retry=0 wait_seconds=0.047756",
+      "ticket_id=T0086 retry=0 wait_seconds=0.052366",
+      "ticket_id=T0065 retry=0 wait_seconds=0.055118"
+    ],
+    "redaction_counts": {
+      "email": 55,
+      "phone": 91,
+      "order_id": 132,
+      "total": 278
+    },
+    "budget_exhausted": 0,
+    "routing_counts": {
+      "support_queue": 102,
+      "security_team": 34,
+      "human_review": 17,
+      "premium_desk": 11
+    }
+  },
+  "zero_shot_confusion_matrix": {
+    "billing": {
+      "billing": 38,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 0
+    },
+    "delivery": {
+      "billing": 0,
+      "delivery": 36,
+      "technical": 0,
+      "fraud": 0
+    },
+    "technical": {
+      "billing": 10,
+      "delivery": 0,
+      "technical": 29,
+      "fraud": 0
+    },
+    "fraud": {
+      "billing": 11,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 23
+    }
+  },
+  "budget_demo": {
+    "run_name": "zero_shot_budget_demo",
+    "prompt": "zero_shot",
+    "token_budget": 6000,
+    "status_counts": {
+      "budget_exhausted": 84,
+      "classified_json": 63,
+      "classified_keyword": 5,
+      "skipped_empty": 4,
+      "flagged_long": 4,
+      "flagged_invalid_output": 4
+    },
+    "classified_tickets": 68,
+    "correct_classifications": 57,
+    "accuracy_classified_only": 0.8382352941176471,
+    "total_tokens": 6076,
+    "tokens_per_classified_ticket": 89.3529411764706,
+    "retry_count": 8,
+    "mock_call_attempts": 80,
+    "successful_mock_responses": 72,
+    "retry_log": [
+      "ticket_id=T0002 retry=0 wait_seconds=0.052993",
+      "ticket_id=T0116 retry=0 wait_seconds=0.045313",
+      "ticket_id=T0153 retry=0 wait_seconds=0.048438",
+      "ticket_id=T0039 retry=0 wait_seconds=0.047790",
+      "ticket_id=T0152 retry=0 wait_seconds=0.054206",
+      "ticket_id=T0043 retry=0 wait_seconds=0.053459",
+      "ticket_id=T0111 retry=0 wait_seconds=0.056152",
+      "ticket_id=T0155 retry=0 wait_seconds=0.046087"
+    ],
+    "redaction_counts": {},
+    "budget_exhausted": 84,
+    "routing_counts": {
+      "human_review": 96,
+      "support_queue": 50,
+      "security_team": 11,
+      "premium_desk": 7
+    },
+    "budget_used": 6000
+  },
+  "final_few_shot": {
+    "run_name": "few_shot_final",
+    "prompt": "few_shot",
+    "token_budget": 100000,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "flagged_long": 4,
+      "skipped_empty": 4
+    },
+    "classified_tickets": 147,
+    "correct_classifications": 147,
+    "accuracy_classified_only": 1.0,
+    "total_tokens": 28432,
+    "tokens_per_classified_ticket": 193.41496598639455,
+    "retry_count": 19,
+    "mock_call_attempts": 175,
+    "successful_mock_responses": 156,
+    "retry_log": [
+      "ticket_id=T0002 retry=0 wait_seconds=0.052993",
+      "ticket_id=T0116 retry=0 wait_seconds=0.045313",
+      "ticket_id=T0153 retry=0 wait_seconds=0.048438",
+      "ticket_id=T0039 retry=0 wait_seconds=0.047790",
+      "ticket_id=T0152 retry=0 wait_seconds=0.054206",
+      "ticket_id=T0043 retry=0 wait_seconds=0.053459",
+      "ticket_id=T0111 retry=0 wait_seconds=0.056152",
+      "ticket_id=T0155 retry=0 wait_seconds=0.046087",
+      "ticket_id=T0100 retry=0 wait_seconds=0.050274",
+      "ticket_id=T0068 retry=0 wait_seconds=0.045372",
+      "ticket_id=T0135 retry=0 wait_seconds=0.047733",
+      "ticket_id=T0009 retry=0 wait_seconds=0.051317",
+      "ticket_id=T0067 retry=0 wait_seconds=0.045332",
+      "ticket_id=T0106 retry=0 wait_seconds=0.047485",
+      "ticket_id=T0097 retry=0 wait_seconds=0.053124",
+      "ticket_id=T0003 retry=0 wait_seconds=0.051812",
+      "ticket_id=T0019 retry=0 wait_seconds=0.047756",
+      "ticket_id=T0086 retry=0 wait_seconds=0.052366",
+      "ticket_id=T0065 retry=0 wait_seconds=0.055118"
+    ],
+    "redaction_counts": {},
+    "budget_exhausted": 0,
+    "routing_counts": {
+      "support_queue": 102,
+      "security_team": 34,
+      "human_review": 17,
+      "premium_desk": 11
+    }
+  },
+  "final_routing_counts": {
+    "support_queue": 102,
+    "security_team": 34,
+    "human_review": 17,
+    "premium_desk": 11
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "Q1": {
+    "rows": 30,
+    "columns": [
+      "customer_id",
+      "spend_over_500_inr"
+    ]
+  },
+  "Q2": {
+    "rows": 30,
+    "columns": [
+      "city",
+      "category",
+      "revenue_inr"
+    ]
+  },
+  "Q3": {
+    "rows": 11,
+    "columns": [
+      "product_id",
+      "product_name",
+      "price_inr"
+    ]
+  },
+  "Q4": {
+    "rows": 25,
+    "columns": [
+      "customer_id",
+      "city"
+    ]
+  },
+  "Q5": {
+    "rows": 550,
+    "columns": [
+      "customer_id",
+      "total_spend",
+      "avg_spend"
+    ]
+  },
+  "Q6": {
+    "rows": 1175,
+    "columns": [
+      "customer_id",
+      "city",
+      "total_spend_inr",
+      "spend_rank",
+      "dense_spend_rank",
+      "spend_row_number"
+    ]
+  },
+  "Q7": {
+    "rows": 183,
+    "columns": [
+      "day",
+      "revenue_inr",
+      "cumulative_revenue_inr"
+    ]
+  }
+}

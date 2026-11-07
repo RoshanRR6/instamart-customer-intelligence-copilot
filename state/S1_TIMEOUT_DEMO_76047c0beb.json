@@ -1,0 +1,18 @@
+{
+  "run_id": "S1_TIMEOUT_DEMO_76047c0beb",
+  "scenario_id": "S1_TIMEOUT_DEMO",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AGENT for refund requests. Use the available tools in sequence. Only completed orders are refundable. A completed order delivered in more than 45 minutes gets a full refund; 45 minutes or less gets zero. Refunds above INR 1000 must be escalated to a human and never issued automatically. Use search_policy to ground the decision. Do not claim an action occurred unless its tool observation confirms it."
+    },
+    {
+      "role": "user",
+      "content": "My order ORD-100048 reached me very late. I would like a refund."
+    }
+  ],
+  "tokens_used": 0,
+  "step_number": 0,
+  "tools_executed": [],
+  "llm_calls": 0
+}
